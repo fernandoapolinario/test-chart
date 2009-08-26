@@ -204,13 +204,15 @@ public class coreAPP {
     
         //System.out.println("IDP: "+idp_temporal_categorias);
         
-        System.out.println((Float) Math.abs(temporal-cien));
-        System.out.println(((Float) Math.abs(temporal-cien)).compareTo(tolerancia));
+        
+        
+        System.out.println(new Float(Math.abs(temporal-cien)));
+        System.out.println((new Float(Math.abs(temporal-cien))).compareTo(new Float(tolerancia)));
         System.out.println(tolerancia);        
         System.out.println(((float) Math.abs(temporal-cien))<tolerancia);
         
         //if (((float) Math.abs(temporal-cien))<tolerancia)
-        if (((Float) Math.abs(temporal-cien)).compareTo(tolerancia) > 0)
+        if ((new Float(Math.abs(temporal-cien))).compareTo(new Float(tolerancia)) > 0)
         {
             calculos.setIDP(new Float(idp_temporal_categorias/3));           
         }
