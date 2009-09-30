@@ -9,14 +9,14 @@ public class TestDBConn extends TestCase {
 
 	public void testDb() {
 
-		String dbRoot = "testdb";
+		String dbRoot = "db";
 		DbMode dbMode = DbMode.EMBEDDED;	
-		String dbName = "test";
-		String dbUser = "root";
-		String dbPass = "root";
-		String configureDbSql = "test.sql";
-		String createDbSql = "createDbSql.sql";
-		String populateDbSql = "populateDbSql.sql";
+		String dbName = "plandifor_2";
+		String dbUser = "plandifor_2";
+		String dbPass = "plandifor_2";
+		String configureDbSql = "Script_Config_PlanDIFOR_Derby.sql";
+		String createDbSql = "PlanDIFOR_2_0_Derby_v19.sql";
+		String populateDbSql = "Script_Carga_Datos_PlanDIFOR_Derby_v19.sql";
 
 		DbManager db = new DbManager(dbRoot, dbMode, dbName, dbUser, dbPass,
 				configureDbSql, createDbSql, populateDbSql);

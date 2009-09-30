@@ -711,9 +711,12 @@ public class DbManager {
                   DbErrorType.SYNTAX_ERROR);
             }
             sql.close();
+            
+            FileOutputStream out = new FileOutputStream("log.txt");
+            
             sql = new BufferedInputStream(
               DbManager.class.getResourceAsStream(populateDbSql));
-            if (ij.runScript(c, sql, enc, System.out, enc) != 0) {
+            if (ij.runScript(c, sql, enc, out, enc) != 0) {
                 throw new DbException("Database population script failed",
                   DbErrorType.SYNTAX_ERROR);
             }
